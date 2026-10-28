@@ -1,0 +1,22 @@
+# dsh-love：把每天聊天蒸馏成角色卡 + 跨会话感情模块。
+# 行配置全部可调；dataDir 留空 = 自动使用 <DSH_HOME>/dsh-love。
+- insert:
+    - id: dsh-love
+      name: dsh-love
+      config:
+        # 数据目录（留空自动解析）
+        dataDir: ''
+        # 自动记录 AI 的 QQ 发言（send 工具调用）
+        captureSends: true
+        # 自动记录读取到的聊天上下文（get/wait 工具结果）
+        captureReads: true
+        # 蒸馏后自动把生成节同步进共享人格卡（syncTargets 为空时自动找
+        # <DSH_HOME>/douyin-browser/memory/persona/role-card.md）
+        autoSync: true
+        syncTargets: []
+        # 注入系统提示词的小节顺序（persona 前缀 0 与 PLAN_POLICY 500 之间）
+        sectionOrder: 300
+        # 注入每个会话的角色卡+感情模块最大字符数
+        maxInjectedChars: 2200
+        # 聊天日志保留天数
+        logKeepDays: 30
